@@ -4,25 +4,9 @@ import {
   Navigate,
   Route,
   Routes,
-  useNavigate,
 } from "react-router-dom";
 import Home from "./pages/home";
 import Landing from "./pages/landing";
-
-const routes = [
-  {
-    id: 1,
-    name: "landing",
-    component: <Landing />,
-    path: "/",
-  },
-  {
-    id: 2,
-    name: "Home",
-    component: <Home />,
-    path: "/home",
-  },
-];
 
 function PrivateRoute({ children }) {
   const auth = localStorage.getItem("token");
